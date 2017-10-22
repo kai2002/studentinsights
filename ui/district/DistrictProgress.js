@@ -18,7 +18,6 @@ class DistrictProgress extends React.Component {
   }
 
   renderStudents(json) {
-    debugger
     const {students} = json;
     return <div>{JSON.stringify(students, null, 2)}</div>;
   }
