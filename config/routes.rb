@@ -53,4 +53,6 @@ Rails.application.routes.draw do
     get :star_math, on: :member
     get :csv, on: :member
   end
+
+  get 'district/notes_heatmap' => 'district#notes_heatmap'
 end
