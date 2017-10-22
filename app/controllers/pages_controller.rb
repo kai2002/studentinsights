@@ -15,4 +15,8 @@ class PagesController < ApplicationController
     render text: ENV['LETS_ENCRYPT_STRING']
   end
 
+  def spa
+    @serialied_data = { spa: true }
+    render 'shared/serialized_data'
+  end
 end

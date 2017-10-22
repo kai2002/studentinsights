@@ -1,4 +1,4 @@
-import './config/sprockets-shims.js';
+import './sprocketsShims.js';
 import './legacy.js';
 
 $(document).ready(() => {

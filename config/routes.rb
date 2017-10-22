@@ -53,4 +53,8 @@ Rails.application.routes.draw do
     get :star_math, on: :member
     get :csv, on: :member
   end
+
+  get 'districts' => 'pages#spa'
+  get 'districts/:district_key/progress' => 'pages#spa'
+  get 'districts/:district_key/progress.json' => 'districts#progress'
 end
