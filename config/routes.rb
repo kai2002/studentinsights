@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   end
 
   get 'district/notes_heatmap' => 'district#notes_heatmap'
+  get 'district/restricted_notes_heatmap' => 'district#restricted_notes_heatmap'
 end
