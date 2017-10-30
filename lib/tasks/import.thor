@@ -167,7 +167,11 @@ class Import
         begin
           file_importer.import
         rescue => error
-          puts "🚨  🚨  🚨  🚨  🚨  Error! #{error}" unless Rails.env.test?
+          unless Rails.env.test?
+            puts "🚨  🚨  🚨  🚨  🚨  Error! #{error}"
+            puts error.backtrace[0..10]
+            puts
+          end
 
           extra_info =  { "importer" => file_importer.class.name }
           ErrorMailer.error_report(error, extra_info).deliver_now if Rails.env.production?
